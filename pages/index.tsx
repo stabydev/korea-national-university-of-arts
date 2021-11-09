@@ -737,16 +737,14 @@ const Wrapper = styled.main`
 
         .underline {
           position: relative;
+          z-index: 0;
 
-          > b {
-            z-index: 0;
-          }
           &:before {
             content: '';
             position: absolute;
             bottom: 0;
             width: 100%;
-            height: 2.125rem;
+            height: 0.625rem;
             background-color: ${palette.basicAccent4};
             z-index: -1;
 
