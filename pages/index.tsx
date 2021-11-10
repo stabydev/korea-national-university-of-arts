@@ -149,11 +149,92 @@ const Home: NextPage = () => {
           <div className="title">
             <text>2</text>
           </div>
+          <div className="description">
+            <span className="underline">
+              팀원의 <b>닉네임</b>을 검색해주세요
+            </span>
+            <p className="gray">
+              혹은 <b>멤버</b>를 선택해서 팀원을 찾을 수 있어요
+            </p>
+          </div>
+          <div className="img">
+            <img src="/static/home-search.png" alt="home-search" />
+          </div>
         </div>
         <div className="wrapper">
           <div className="title">
             <text>3</text>
           </div>
+          <div className="description">
+            <p>팀원의 프로필을 터치 후,</p>
+            <span className="underline">
+              개인페이지에서 <b>팔로우</b>를 선택해주세요.
+            </span>
+          </div>
+          <div className="img">
+            <img src="/static/page-follow.png" alt="page-follow" />
+          </div>
+        </div>
+      </section>
+      <section className="four">
+        <div className="wrapper">
+          <div className="mockup">
+            <img src="/static/submit-mockup.png" alt="submit-mockup" />
+          </div>
+          <div className="content">
+            <h1 className="weight-900">02</h1>
+            <h1 className="weight-700">홈 - 등록하기를 눌러주세요!</h1>
+            <div className="description">
+              <p>회원가입과 팔로우를 완료하셨으면</p>
+              <p>이제 공고를 등록해 볼까요?</p>
+            </div>
+            <div className="add-post">
+              <img className="add-post-img" src="/static/ic-add-post.png" alt="ic-add-post" />
+              <img
+                className="submit-mockup-img"
+                src="/static/submit-mockup.png"
+                alt="submit-mockup-2"
+              />
+            </div>
+            <div className="arrow">
+              <img src="/static/bottom-arrow.svg" alt="bottom-arrow" />
+            </div>
+            <div className="content-box">
+              <div className="content">
+                <span>피드 등록</span>
+                <p>나를 알리는 글을 등록해주세요</p>
+              </div>
+              <div className="content">
+                <span className="badge">포스트 등록</span>
+                <p>팀원을 찾는 글을 등록해주세요</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="five">
+        <div className="wrapper">
+          <div className="content">
+            <h1 className="weight-900">03</h1>
+            <h1 className="weight-700">천천히 스크롤하면서 공백을 채워보세요!</h1>
+            <div className="description">
+              <p>잘못 입력했다면, 수정도 가능해요:)</p>
+            </div>
+          </div>
+        </div>
+        <div className="img-wrapper">
+          <div className="content">
+            <div className="img-1">
+              <img src="/static/submit-post-1.png" alt="submit-post-1" />
+            </div>
+            <div className="img-2">
+              <img src="/static/submit-post-2.png" alt="submit-post-2" />
+            </div>
+            <div className="img-3">
+              <img src="/static/submit-post-3.png" alt="submit-post-3" />
+            </div>
+          </div>
+          <div className="gradient"></div>
         </div>
       </section>
     </Wrapper>
@@ -184,14 +265,14 @@ const Wrapper = styled.main`
         }
         h1,
         h2 {
-          font-family: 'Nanum Gothic';
+          font-family: 'Noto Sans KR';
           color: #ffffff;
         }
 
         h1 {
           margin-bottom: 2.625rem;
           font-weight: 800;
-          font-size: 6.25rem;
+          font-size: 6.875rem;
 
           ${md} {
             font-size: 1.25rem;
@@ -697,7 +778,7 @@ const Wrapper = styled.main`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
-    min-height: 24.5rem;
+    min-height: 20.5rem;
 
     background-color: #ffffff;
 
@@ -709,6 +790,13 @@ const Wrapper = styled.main`
     .wrapper {
       background-color: ${palette.deepBackground};
       font-family: 'Noto Sans KR';
+
+      min-height: 68.1875rem;
+      position: relative;
+
+      ${md} {
+        min-height: 32.5625rem;
+      }
 
       .title {
         display: flex;
@@ -722,11 +810,21 @@ const Wrapper = styled.main`
 
         color: #ffffff;
 
+        ${md} {
+          margin-top: 1.6875rem;
+          font-size: 0.75rem;
+          line-height: 0.75rem;
+        }
+
         text {
           padding: 0.1875rem 1.4375rem;
 
           background-color: ${palette.basicAccent1};
           border-radius: 50%;
+
+          ${md} {
+            padding: 0.25rem 0.375rem;
+          }
         }
       }
 
@@ -734,6 +832,14 @@ const Wrapper = styled.main`
         font-size: 1.875rem;
         line-height: 3.25rem;
         text-align: center;
+
+        margin: 2.6875rem 0 11.125rem;
+
+        ${md} {
+          font-size: 1rem;
+          line-height: 1.75rem;
+          margin: 1.25rem 0 2.25rem;
+        }
 
         .underline {
           position: relative;
@@ -749,18 +855,298 @@ const Wrapper = styled.main`
             z-index: -1;
 
             ${md} {
-              height: 0.9375rem;
+              height: 0.375rem;
             }
+          }
+        }
+
+        .gray {
+          margin-top: 0.6875rem;
+          font-size: 1.5rem;
+          line-height: 2.1875rem;
+          color: #484a54;
+
+          ${md} {
+            margin-top: 0.375rem;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
           }
         }
       }
 
       .img {
-        position: relative;
+        ${md} {
+          text-align: center;
+        }
+
         img {
+          max-width: 100%;
+          position: absolute;
           bottom: 0;
+
+          ${md} {
+            position: relative;
+            bottom: -5px;
+          }
+        }
+      }
+    }
+  }
+
+  .four {
+    .wrapper {
+      padding: 15.875rem 13rem 12.5rem 25.6875rem;
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+
+      ${md} {
+        margin: 3.125rem 0 4.5rem;
+        padding: 0;
+        text-align: center;
+
+        grid-template-columns: 1fr;
+      }
+
+      .mockup {
+        ${md} {
+          display: none;
+        }
+        img {
           max-width: 100%;
         }
+      }
+
+      .content {
+        display: inline-flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        h1 {
+          font-size: 3.125rem;
+
+          ${md} {
+            font-size: 1rem;
+          }
+          &.weight-900 {
+            font-weight: 900;
+            line-height: 3.6875rem;
+
+            ${md} {
+              line-height: 1.1875rem;
+            }
+          }
+          &.weight-700 {
+            margin-top: 2.0625rem;
+            font-weight: 700;
+            line-height: 4.5625rem;
+
+            ${md} {
+              line-height: 1.1875rem;
+            }
+          }
+        }
+
+        .description {
+          margin-top: 2rem;
+          font-family: 'Noto Sans KR';
+          font-size: 1.875rem;
+          font-weight: 500;
+          line-height: 3.125rem;
+          color: ${palette.deepGray};
+          text-align: center;
+
+          ${md} {
+            margin-top: 1.125rem;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+          }
+        }
+
+        .add-post {
+          margin-top: 6.25rem;
+          text-align: center;
+
+          ${md} {
+            margin-top: 0.9375rem;
+          }
+
+          img.add-post-img {
+            max-width: 60%;
+
+            ${md} {
+              display: none;
+            }
+          }
+
+          img.submit-mockup-img {
+            display: none;
+
+            ${md} {
+              display: inline-block;
+
+              max-width: 77%;
+            }
+          }
+        }
+
+        .arrow {
+          ${md} {
+            margin: 0.625rem 0 1.75rem;
+            img {
+              width: 1.375rem;
+              height: 1.375rem;
+            }
+          }
+        }
+
+        .content-box {
+          margin-top: 3rem;
+          padding: 3.125rem 9.375rem;
+          background-color: #ffffff;
+
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 5.625rem;
+
+          filter: drop-shadow(0px 0px 40px #c6bde9);
+          border-radius: 25px;
+
+          ${md} {
+            margin-top: 0;
+            padding: 1.25rem 4rem;
+            gap: 2.4rem;
+          }
+
+          .content {
+            span {
+              font-size: 1.375rem;
+              font-weight: 500;
+
+              ${md} {
+                font-size: 1rem;
+              }
+            }
+            p {
+              margin-top: 0.375rem;
+              font-size: 1rem;
+
+              ${md} {
+                font-size: 0.75rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .five {
+    background-color: ${palette.deepBackground};
+
+    .wrapper {
+      text-align: center;
+      .content {
+        display: inline-flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        margin: 2.8125rem 0 0.375rem;
+        h1 {
+          font-size: 3.125rem;
+
+          ${md} {
+            font-size: 1rem;
+          }
+          &.weight-900 {
+            font-weight: 900;
+            line-height: 3.6875rem;
+
+            ${md} {
+              line-height: 1.1875rem;
+            }
+          }
+          &.weight-700 {
+            margin-top: 1.8125rem;
+            font-weight: 700;
+            line-height: 4.5625rem;
+
+            ${md} {
+              margin-top: 1.125rem;
+              line-height: 1.1875rem;
+            }
+          }
+        }
+
+        .description {
+          margin-top: 1.125rem;
+          font-family: 'Noto Sans KR';
+          font-size: 1.875rem;
+          font-weight: 500;
+          line-height: 3.125rem;
+          color: ${palette.deepGray};
+          text-align: center;
+
+          ${md} {
+            margin-top: 0.6875rem;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+          }
+        }
+      }
+    }
+    .img-wrapper {
+      background: linear-gradient(0deg, rgba(154, 126, 255, 0.35) 0%, rgba(108, 83, 198, 0) 86.01%);
+
+      min-height: 57.25rem;
+      position: relative;
+
+      .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+
+        gap: 3rem;
+
+        position: absolute;
+        bottom: 0;
+
+        ${md} {
+          display: none;
+        }
+        .img-1,
+        .img-2,
+        .img-3 {
+          display: flex;
+          justify-content: center;
+
+          position: relative;
+          img {
+            max-width: 75%;
+          }
+
+          &:after {
+            content: '';
+            background: url('/static/scroll.svg') no-repeat center/contain;
+
+            width: 6.25rem;
+            height: 6.25rem;
+
+            position: absolute;
+            bottom: 1.6875rem;
+
+            z-index: 1;
+          }
+        }
+      }
+
+      .gradient {
+        position: absolute;
+        bottom: 0;
+
+        width: 100%;
+        height: 13.5625rem;
+
+        background: linear-gradient(0deg, #b3aad6 0%, rgba(213, 206, 238, 0) 86.01%);
       }
     }
   }
