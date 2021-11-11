@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import styled from 'styled-components'
-import { md, palette, sm } from '../styles/styles'
+import { md, palette, sm, xxs } from '../styles/styles'
 
 const Home: NextPage = () => {
   return (
@@ -234,8 +234,54 @@ const Home: NextPage = () => {
               <img src="/static/submit-post-3.png" alt="submit-post-3" />
             </div>
           </div>
+          <div className="mobile-content">
+            <div className="img">
+              <img src="/static/submit-post-mobile.png" alt="submit-post-mobile" />
+            </div>
+          </div>
           <div className="gradient"></div>
         </div>
+      </section>
+      <section className="six">
+        <div className="wrapper">
+          <h1>포스트 등록시, 알아두셔야 할 것이 있어요!</h1>
+          <div className="content">
+            <img className="ic-warning" src="/static/warning.svg" alt="warning" />
+            <div className="box">
+              <span className="red">팔로우</span>하지 않은 멤버는 참여멤버로 초대가 불가능해요
+              <br />
+              먼저 팀멤버를 찾아서 팔로우 해보세요!
+            </div>
+            <div className="box">
+              팀멤버를 <span className="red">&lsquo;참여멤버&rsquo;</span>로 초대하지 않았을 경우,
+              <br />
+              팀멤버가 직접 포스트에 지원해야해요.
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="seven">
+        <div className="wrapper">
+          <div className="content">
+            <h1 className="weight-900">04</h1>
+            <h1 className="weight-700">잘 등록되었는지 확인해볼까요?</h1>
+            <div className="description">
+              <p>
+                하단메뉴 - <span>나의 활동</span>에서 확인해보세요!
+              </p>
+            </div>
+            <div className="tab-history-circle">
+              <img src="/static/ic-tab-history-on.svg" alt="ic-tab-history-on" />
+              <span>나의활동</span>
+            </div>
+          </div>
+        </div>
+        <div className="img-wrapper">
+          <img src="/static/task-mockup.png" alt="task-mockup" />
+        </div>
+      </section>
+      <section className="eight">
+        <div className="wrapper"></div>
       </section>
     </Wrapper>
   )
@@ -1100,6 +1146,11 @@ const Wrapper = styled.main`
       min-height: 57.25rem;
       position: relative;
 
+      ${md} {
+        min-height: 30rem;
+        margin-top: 2.5rem;
+      }
+
       .content {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -1139,6 +1190,45 @@ const Wrapper = styled.main`
         }
       }
 
+      .mobile-content {
+        display: none;
+
+        ${md} {
+          display: block;
+          text-align: center;
+
+          position: absolute;
+          bottom: 0;
+
+          .img {
+            display: flex;
+            justify-content: center;
+            img {
+              max-width: 32%;
+
+              ${xxs} {
+                max-width: 78%;
+              }
+            }
+
+            &:after {
+              content: '';
+              background: url('/static/scroll.svg') no-repeat center/contain;
+
+              width: 3.375rem;
+              height: 3.375rem;
+
+              position: absolute;
+              bottom: 1.6875rem;
+
+              z-index: 1;
+
+              margin-right: 6rem;
+            }
+          }
+        }
+      }
+
       .gradient {
         position: absolute;
         bottom: 0;
@@ -1147,6 +1237,217 @@ const Wrapper = styled.main`
         height: 13.5625rem;
 
         background: linear-gradient(0deg, #b3aad6 0%, rgba(213, 206, 238, 0) 86.01%);
+      }
+    }
+  }
+
+  .six {
+    .wrapper {
+      font-family: 'Noto Sans KR';
+      text-align: center;
+      margin: 18.75rem 27.3125rem 18.75rem 22.1875rem;
+
+      ${md} {
+        margin: 3.875rem auto 5rem;
+      }
+
+      h1 {
+        font-size: 3.125rem;
+        line-height: 4.5rem;
+
+        ${md} {
+          font-size: 1rem;
+          line-height: 1.4375rem;
+        }
+      }
+
+      .content {
+        position: relative;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5.875rem;
+
+        margin-top: 8rem;
+
+        ${md} {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+
+          margin-top: 3.125rem;
+          padding: 0 4.75rem;
+        }
+
+        .ic-warning {
+          position: absolute;
+          top: -100px;
+          left: -100px;
+
+          width: 10.3125rem;
+          height: 10.3125rem;
+
+          ${md} {
+            top: -25px;
+            left: 35px;
+            width: 4.25rem;
+            height: 4.25rem;
+          }
+        }
+        .box {
+          background: #ffffff;
+          border: 14px solid #ffffff;
+          box-sizing: border-box;
+          box-shadow: 0px 0px 40px #c6bde9;
+          border-radius: 36px;
+          padding: 2.625rem 3.125rem;
+
+          font-size: 1.875rem;
+          line-height: 3.625rem;
+
+          ${md} {
+            padding: 1rem;
+            font-size: 0.875rem;
+            line-height: 1.75rem;
+          }
+
+          .red {
+            color: ${palette.red};
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  .seven {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+
+    background-color: ${palette.deepBackground};
+
+    ${md} {
+      grid-template-columns: 1fr;
+    }
+
+    .wrapper {
+      text-align: center;
+      padding: 12.25rem 0 13.4375rem;
+
+      ${md} {
+        padding: 2.0625rem 0 0;
+      }
+
+      .content {
+        position: relative;
+        h1 {
+          font-size: 3.125rem;
+
+          ${md} {
+            font-size: 1rem;
+          }
+          &.weight-900 {
+            font-weight: 900;
+            line-height: 3.6875rem;
+
+            ${md} {
+              line-height: 1.1875rem;
+            }
+          }
+          &.weight-700 {
+            margin-top: 1.8125rem;
+            font-weight: 700;
+            line-height: 4.5625rem;
+
+            ${md} {
+              margin-top: 1.125rem;
+              line-height: 1.1875rem;
+            }
+          }
+        }
+
+        .description {
+          margin-top: 1.125rem;
+          font-family: 'Noto Sans KR';
+          font-size: 1.875rem;
+          font-weight: 500;
+          line-height: 3.125rem;
+          color: ${palette.deepGray};
+          text-align: center;
+
+          ${md} {
+            margin-top: 0.6875rem;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+          }
+
+          span {
+            color: ${palette.basicAccent};
+          }
+        }
+
+        .tab-history-circle {
+          font-family: 'Noto Sans KR';
+          margin-top: 5.875rem;
+          margin: 5.875rem auto 0;
+
+          width: 14.5625rem;
+          height: 14.5625rem;
+
+          background-color: rgba(255, 255, 255, 0.5);
+          box-shadow: 0px 0px 40px #c6bde9;
+          border-radius: 50%;
+
+          display: inline-flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          align-items: center;
+
+          z-index: 1;
+
+          span {
+            font-size: 2.25rem;
+            color: #3700b9;
+            margin-top: 1rem;
+          }
+
+          ${md} {
+            position: absolute;
+            top: 140px;
+            left: -50px;
+            width: 5.5rem;
+            height: 5.5rem;
+
+            margin: 0;
+
+            img {
+              max-width: 1.5rem;
+              max-height: 1.5rem;
+            }
+
+            span {
+              font-size: 0.875rem;
+              margin-top: 0.25rem;
+            }
+          }
+        }
+      }
+    }
+
+    .img-wrapper {
+      padding: 5.0625rem 0 0;
+
+      position: relative;
+      text-align: right;
+
+      img {
+        max-width: 100%;
+
+        ${md} {
+          max-width: 80%;
+          position: relative;
+          bottom: -5px;
+        }
       }
     }
   }
