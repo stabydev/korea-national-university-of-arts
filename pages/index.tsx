@@ -446,7 +446,7 @@ const Wrapper = styled.main`
 
         h1 {
           margin-bottom: 2.625rem;
-          font-weight: 800;
+          font-weight: bold;
           font-size: 6.875rem;
 
           ${md} {
@@ -457,7 +457,7 @@ const Wrapper = styled.main`
 
         h2 {
           font-size: 4.375rem;
-          font-weight: 800;
+          font-weight: bold;
 
           ${md} {
             font-size: 1.5rem;
