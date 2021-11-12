@@ -2336,6 +2336,9 @@ const Wrapper = styled.main`
     .wrapper {
       font-family: 'Noto Sans KR';
       text-align: center;
+      ${md} {
+        padding-top: 5.875rem;
+      }
       .title {
         font-size: 6.875rem;
         font-weight: bold;
