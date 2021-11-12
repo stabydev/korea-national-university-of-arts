@@ -2328,7 +2328,7 @@ const Wrapper = styled.main`
     justify-content: center;
     align-items: center;
 
-    background: url('/static/background.png') no-repeat center/contain;
+    background: url('/static/background.png') no-repeat center/cover;
 
     ${md} {
       min-height: 12rem;
