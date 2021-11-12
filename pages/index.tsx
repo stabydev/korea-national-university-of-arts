@@ -403,10 +403,10 @@ const Home: NextPage = () => {
             <p>지금 바로 다운받아보세요!</p>
           </div>
           <div className="btn-group">
-            <a href="#">
+            <a href="https://play.google.com/store/apps/details?id=com.staby.connect">
               <img src="/static/google-play.png" alt="google-play" />
             </a>
-            <a href="#">
+            <a href="https://apps.apple.com/kr/app/%EC%8A%A4%ED%83%9C%EB%B9%84-%EC%BB%A4%EB%84%A5%ED%8A%B8/id1544694629">
               <img src="/static/app-store.png" alt="app-store" />
             </a>
           </div>
@@ -584,6 +584,7 @@ const Wrapper = styled.main`
         text-transform: uppercase;
         font-weight: 900;
         font-size: 3.75rem;
+        letter-spacing: 0.32em;
 
         ${md} {
           display: none;
@@ -1070,7 +1071,7 @@ const Wrapper = styled.main`
         .img {
           img {
             ${md} {
-              bottom: -10px;
+              bottom: -5px;
             }
           }
         }
