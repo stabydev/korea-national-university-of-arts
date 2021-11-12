@@ -1061,7 +1061,7 @@ const Wrapper = styled.main`
 
           ${md} {
             position: relative;
-            bottom: -5px;
+            bottom: -25px;
           }
         }
       }
@@ -1070,9 +1070,9 @@ const Wrapper = styled.main`
 
   .four {
     .wrapper {
-      padding: 15.875rem 13rem 12.5rem 25.6875rem;
+      padding: 15.875rem 13rem 12.5rem 22.6875rem;
       display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
+      grid-template-columns: 1fr 1fr;
 
       ${md} {
         margin: 3.125rem 0 4.5rem;
@@ -1138,7 +1138,7 @@ const Wrapper = styled.main`
         }
 
         .add-post {
-          margin-top: 6.25rem;
+          margin-top: 9rem;
           text-align: center;
 
           ${md} {
@@ -1199,6 +1199,29 @@ const Wrapper = styled.main`
 
               ${md} {
                 font-size: 1rem;
+              }
+
+              &.badge {
+                position: relative;
+                &:before {
+                  content: '';
+                  position: absolute;
+                  top: -5px;
+                  left: -30px;
+                  width: 1.0625rem;
+                  height: 1.0625rem;
+
+                  background: #ff004e;
+                  box-shadow: 0px 0px 12px #ff004e;
+                  border-radius: 50%;
+
+                  ${md} {
+                    top: -2px;
+                    left: -15px;
+                    width: 0.625rem;
+                    height: 0.625rem;
+                  }
+                }
               }
             }
             p {
@@ -1373,8 +1396,11 @@ const Wrapper = styled.main`
   .six {
     .wrapper {
       font-family: 'Noto Sans KR';
-      text-align: center;
-      margin: 18.75rem 27.3125rem 18.75rem 22.1875rem;
+      margin: 18.75rem auto 18.75rem;
+
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
 
       ${md} {
         margin: 3.875rem auto 5rem;
@@ -1433,10 +1459,13 @@ const Wrapper = styled.main`
           font-size: 1.875rem;
           line-height: 3.625rem;
 
+          max-width: 29.75rem;
+
           ${md} {
             padding: 1rem;
             font-size: 0.875rem;
             line-height: 1.75rem;
+            max-width: 14.0625rem;
           }
 
           .red {
@@ -1919,8 +1948,12 @@ const Wrapper = styled.main`
 
           ${md} {
             grid-template-columns: 1fr;
+          }
 
-            &:nth-of-type(1) {
+          &:nth-of-type(1) {
+            margin-bottom: 2rem;
+
+            ${md} {
               margin-bottom: 2.3125rem;
             }
           }
@@ -1949,7 +1982,7 @@ const Wrapper = styled.main`
       }
 
       .announcement {
-        margin: 6rem 0 23.4375rem 90rem;
+        margin: 6rem 0 23.4375rem 80rem;
         font-family: 'Noto Sans KR';
         font-size: 1.875rem;
         font-weight: bold;
