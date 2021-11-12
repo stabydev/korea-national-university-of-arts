@@ -1065,6 +1065,16 @@ const Wrapper = styled.main`
           }
         }
       }
+
+      &:last-child {
+        .img {
+          img {
+            ${md} {
+              bottom: -10px;
+            }
+          }
+        }
+      }
     }
   }
 
