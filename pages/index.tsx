@@ -281,7 +281,136 @@ const Home: NextPage = () => {
         </div>
       </section>
       <section className="eight">
-        <div className="wrapper"></div>
+        <div className="wrapper">
+          <div className="content">
+            <div className="title">
+              <div className="group">
+                <div className="circle"></div>
+                <img src="/static/ic-tab-chat-off-1.svg" alt="ic-tab-chat-off-1" />
+              </div>
+              <span>COMMUNICATION</span>
+            </div>
+            <div className="description">
+              <p>진행상황을 공유하고 싶을때,</p>
+              <p>언제 어디서든 커넥트로 바로 채팅해보세요!</p>
+            </div>
+          </div>
+          <div className="img-content">
+            <div className="circle-background"></div>
+            <img className="chat-mockup" src="/static/chat-mockup.png" alt="chat-mockup" />
+            <img className="right-arrow-1" src="/static/right-arrow.svg" alt="right-arrow-1" />
+            <img className="right-arrow-2" src="/static/right-arrow.svg" alt="right-arrow-2" />
+            <div className="chat-group-content">
+              <img src="/static/chat-group.png" alt="chat-group" />
+              <p>메뉴를 터치해서 공모전 담당자를 초대해보세요!</p>
+              <p>
+                채팅초대는 <span>포스트 담당자</span>만 가능해요!
+              </p>
+            </div>
+            <div className="gallery-image-content">
+              <img src="/static/gallery-image.png" alt="gallery-image" />
+              <p>사진과 영상도 편하게 보낼 수 있어요</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="nine">
+        <div className="wrapper">
+          <h1 className="title">~SPECIAL EVENT~</h1>
+          <div className="description">
+            <p>공모전 관련 피드를 올리신 분 10분을 추첨해서</p>
+            <p>올리브영 2만원권 상품권을 드려요!</p>
+          </div>
+          <div className="coupon-content">
+            <img src="/static/coupongroup.png" alt="coupongroup" />
+          </div>
+          <h2 className="date">11.15 ~ 12.30</h2>
+          <div className="box">
+            <div>
+              <span>참가조건</span>
+              <span>한국 예술 종합학교 커넥트 연계지원사업 공모전 참가자</span>
+            </div>
+            <div>
+              <span>참여방법</span>
+              <span>공모전 참여/진행과정이 담긴 피드 작성</span>
+            </div>
+          </div>
+          <div className="announcement">결과발표: 1월 5일</div>
+        </div>
+      </section>
+      <section className="ten">
+        <div className="wrapper">
+          <div className="title">
+            <span>SHOW YOURSELF</span>
+          </div>
+          <div className="description">
+            <p>마지막으로 나를 알리는 사진과 동영상을 올려볼까요?</p>
+            <p>현재 진행상황, 관심있는 분야 등 피드에 자유롭게 올려보세요!</p>
+          </div>
+          <div className="content">
+            <div className="img-content">
+              <img src="/static/feed-mockup.png" alt="feed-mockup" />
+            </div>
+            <div className="text-content">
+              <div className="box">
+                <div>
+                  <h3>피드 등록</h3>
+                  <p>나를 알리는 글을 등록해주세요</p>
+                </div>
+                <div>
+                  <h3>포스트 등록</h3>
+                  <p>팀원을 찾는 글을 등록해주세요</p>
+                </div>
+              </div>
+              <div className="group">
+                <div>
+                  <div className="circle">
+                    <img src="/static/mypage.svg" alt="mypage" />
+                  </div>
+                  <span>마이페이지에서 내가 쓴 피드와 포스트를 모아볼 수 있어요</span>
+                </div>
+                <div>
+                  <div className="circle">
+                    <img src="/static/story.svg" alt="story" />
+                  </div>
+                  <span>스토리에서 내가 스크랩한 피드를 확인할 수 있어요</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="eleven">
+        <div className="wrapper">
+          <div className="box">
+            <img className="question" src="/static/question.svg" alt="question" />
+            <h1 className="title">또 궁금한 점이 있으신가요?</h1>
+            <div className="description">
+              <p>
+                <img src="/static/kakao-ch-logo.svg" alt="kakao-ch-logo" />
+                <span>카카오톡채널</span>에서&nbsp;<b>스태비커넥트</b>를&nbsp;추가하고
+              </p>
+              <p>문의사항을 남겨주시면 답변해드려요!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="twelve">
+        <div className="wrapper">
+          <h1 className="title">스태비 커넥트</h1>
+          <div className="description">
+            <p>생각보다 어렵지 않죠?</p>
+            <p>지금 바로 다운받아보세요!</p>
+          </div>
+          <div className="btn-group">
+            <a href="#">
+              <img src="/static/google-play.png" alt="google-play" />
+            </a>
+            <a href="#">
+              <img src="/static/app-store.png" alt="app-store" />
+            </a>
+          </div>
+        </div>
       </section>
     </Wrapper>
   )
@@ -1447,6 +1576,783 @@ const Wrapper = styled.main`
           max-width: 80%;
           position: relative;
           bottom: -5px;
+        }
+      }
+    }
+  }
+
+  .eight {
+    .wrapper {
+      padding: 18.25rem 7rem;
+
+      ${md} {
+        padding: 3.875rem 2.375rem;
+      }
+      .content {
+        text-align: center;
+        .title {
+          position: relative;
+          .group {
+            display: inline-block;
+
+            position: absolute;
+
+            ${md} {
+              position: relative;
+            }
+
+            .circle {
+              display: none;
+
+              ${md} {
+                position: absolute;
+                top: -7px;
+                left: 7px;
+                display: inline-block;
+                width: 2.625rem;
+                height: 2.625rem;
+                background: linear-gradient(
+                  180deg,
+                  rgba(154, 126, 255, 0.5) 0%,
+                  rgba(212, 215, 243, 0) 138.33%
+                );
+                border-radius: 50%;
+              }
+            }
+            img {
+              width: 13.1875rem;
+              height: 13.1875rem;
+
+              position: absolute;
+              top: -115px;
+              left: -60px;
+
+              ${md} {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 2.625rem;
+                height: 2.625rem;
+              }
+            }
+          }
+          span {
+            font-style: normal;
+            font-weight: 900;
+            font-size: 3.75rem;
+            line-height: 4.375rem;
+            letter-spacing: 0.32rem;
+
+            position: relative;
+
+            ${md} {
+              display: none;
+            }
+
+            &:before {
+              content: '';
+              position: absolute;
+              bottom: 15px;
+              width: 100%;
+              height: 1.375rem;
+              background-color: ${palette.basicAccent2};
+              z-index: -1;
+            }
+          }
+        }
+
+        .description {
+          margin: 4.5rem 0 12.5rem;
+          font-family: 'Noto Sans KR';
+          font-weight: bold;
+          font-size: 3.125rem;
+          line-height: 5.625rem;
+
+          text-align: center;
+
+          ${md} {
+            margin: 1.375rem 0;
+            font-size: 1rem;
+            line-height: 1.875rem;
+          }
+        }
+      }
+
+      .img-content {
+        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        .circle-background {
+          position: relative;
+          top: 0;
+          background: linear-gradient(180deg, #d4d7f3 0%, rgba(212, 215, 243, 0) 138.33%);
+          min-width: 95.6875rem;
+          min-height: 95.6875rem;
+          border-radius: 50%;
+
+          z-index: -1;
+
+          ${md} {
+            display: none;
+          }
+        }
+
+        .chat-mockup {
+          max-width: 43.8125rem;
+          margin: 4rem 0 0;
+          position: absolute;
+          left: 0;
+
+          ${md} {
+            margin: 0;
+            max-width: 95%;
+            position: relative;
+          }
+        }
+
+        .right-arrow-1,
+        .right-arrow-2 {
+          width: 2.125rem;
+          height: 2.125rem;
+
+          position: absolute;
+
+          ${md} {
+            display: none;
+          }
+        }
+
+        .right-arrow-1 {
+          margin: 13.1875rem 51.75rem 0 41.8125rem;
+        }
+
+        .right-arrow-2 {
+          margin: 70.875rem 51.75rem 0 41.8125rem;
+        }
+
+        .chat-group-content {
+          position: absolute;
+          right: -30px;
+          margin-top: 4.25rem;
+          max-width: 53.9375rem;
+          text-align: center;
+
+          font-family: 'Noto Sans KR';
+
+          ${md} {
+            position: relative;
+            right: 0;
+          }
+
+          img {
+            max-width: 100%;
+          }
+
+          p:nth-of-type(1) {
+            margin-top: 1.25rem;
+            font-weight: 500;
+            font-size: 1.875rem;
+            line-height: 2.6875rem;
+
+            ${md} {
+              margin-top: 1.4375rem;
+              font-size: 0.875rem;
+              line-height: 1.25rem;
+            }
+          }
+          p:nth-of-type(2) {
+            color: ${palette.deepGray};
+            font-weight: 500;
+            font-size: 1.875rem;
+            line-height: 2.6875rem;
+
+            ${md} {
+              font-size: 0.875rem;
+              line-height: 1.25rem;
+            }
+
+            span {
+              color: #3700b9;
+            }
+          }
+        }
+
+        .gallery-image-content {
+          position: absolute;
+          right: 35px;
+          margin-top: 59.125rem;
+          padding-bottom: 18.75rem;
+          max-width: 45.5rem;
+          text-align: center;
+
+          font-family: 'Noto Sans KR';
+
+          ${md} {
+            position: relative;
+            right: 0;
+            margin: 3.5625rem 0 4.0625rem;
+            padding: 0;
+          }
+          img {
+            max-width: 100%;
+          }
+
+          p {
+            margin-top: 2.75rem;
+            font-weight: 500;
+            font-size: 1.875rem;
+            line-height: 2.6875rem;
+
+            ${md} {
+              margin-top: 1.375rem;
+              font-size: 0.875rem;
+              line-height: 1.25rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .nine {
+    min-height: 76.0625rem;
+    background: linear-gradient(180deg, #7c58ff 30.69%, #987dfc 61.42%, #b8a8f9 76%, #e8e8f4 100%);
+
+    text-align: center;
+
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+
+    ${md} {
+      min-height: 45.4375rem;
+    }
+    .wrapper {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+
+      padding: 7.875rem 0 0 0;
+      color: #ffffff;
+
+      ${md} {
+        padding: 1.625rem 0 0 0;
+      }
+
+      .title {
+        font-size: 3.75rem;
+        font-weight: 900;
+        line-height: 4.375rem;
+        letter-spacing: 0.32rem;
+
+        ${md} {
+          font-size: 1rem;
+          line-height: 1.1875rem;
+        }
+      }
+
+      .description {
+        margin-top: 3.75rem;
+        font-family: 'Noto Sans KR';
+        font-size: 3.125rem;
+        font-weight: bold;
+        line-height: 5.625rem;
+
+        ${md} {
+          margin-top: 0.8125rem;
+          font-size: 0.875rem;
+          line-height: 1.5rem;
+        }
+      }
+
+      .coupon-content {
+        margin-top: 7.75rem;
+        ${md} {
+          margin-top: 3.25rem;
+        }
+        img {
+          max-width: 76.625rem;
+          ${md} {
+            max-width: 100%;
+          }
+        }
+      }
+
+      .date {
+        margin-top: 6.75rem;
+        font-weight: 900;
+        font-size: 3.75rem;
+        line-height: 4.375rem;
+        letter-spacing: 0.14rem;
+
+        ${md} {
+          margin-right: 10rem;
+          margin-top: 4.375rem;
+          font-size: 1.25rem;
+          line-height: 1.5rem;
+        }
+      }
+
+      .box {
+        display: inline-block;
+
+        margin-top: 2.0625rem;
+        padding: 4rem 6.25rem;
+
+        background-color: #ffffff;
+        border-radius: 3.125rem;
+
+        ${md} {
+          margin-top: 0.625rem;
+          padding: 1.25rem;
+          border-radius: 0.625rem;
+        }
+
+        > div {
+          display: grid;
+          grid-template-columns: 0.5fr 1.5fr;
+          align-items: center;
+          justify-items: flex-start;
+          color: #000000;
+
+          font-family: 'Noto Sans KR';
+
+          ${md} {
+            grid-template-columns: 1fr;
+
+            &:nth-of-type(1) {
+              margin-bottom: 2.3125rem;
+            }
+          }
+
+          > span:nth-of-type(1) {
+            font-size: 2.5rem;
+            font-weight: bold;
+            line-height: 3.625rem;
+
+            ${md} {
+              font-size: 0.875rem;
+              line-height: 1.25rem;
+            }
+          }
+
+          > span:nth-of-type(2) {
+            font-size: 1.875rem;
+            line-height: 2.6875rem;
+
+            ${md} {
+              font-size: 0.75rem;
+              line-height: 1rem;
+            }
+          }
+        }
+      }
+
+      .announcement {
+        margin: 6rem 0 23.4375rem 90rem;
+        font-family: 'Noto Sans KR';
+        font-size: 1.875rem;
+        font-weight: bold;
+        line-height: 2.6875rem;
+
+        ${md} {
+          margin: 0.8125rem 0 3.6875rem 14rem;
+
+          font-size: 0.75rem;
+          line-height: 1rem;
+        }
+      }
+    }
+  }
+
+  .ten {
+    min-height: 126.5rem;
+
+    ${md} {
+      min-height: 48rem;
+    }
+    .wrapper {
+      padding-top: 6.25rem;
+      .title,
+      .description {
+        padding-left: 7.5rem;
+
+        ${md} {
+          padding-left: 2.25rem;
+        }
+      }
+      .title {
+        span {
+          position: relative;
+
+          font-size: 3.75rem;
+          font-weight: 900;
+          line-height: 4.375rem;
+          letter-spacing: 0.32rem;
+
+          ${md} {
+            font-size: 1rem;
+            line-height: 1.1875rem;
+          }
+          &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 105%;
+            height: 1.375rem;
+            background-color: ${palette.basicAccent4};
+            z-index: -1;
+
+            ${md} {
+              height: 0.8125rem;
+            }
+          }
+        }
+      }
+
+      .description {
+        margin-top: 2.75rem;
+        font-family: 'Noto Sans KR';
+
+        font-size: 2.5rem;
+        font-weight: 500;
+        line-height: 4.375rem;
+
+        ${md} {
+          margin-top: 1rem;
+          font-size: 0.75rem;
+          line-height: 1.25rem;
+        }
+      }
+
+      .content {
+        margin-top: 12rem;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+
+        ${md} {
+          margin-top: 2.9375rem;
+          grid-template-columns: 1fr;
+        }
+
+        .img-content {
+          img {
+            max-width: 100%;
+
+            ${md} {
+              max-width: 14.5rem;
+            }
+          }
+        }
+
+        .text-content {
+          .box {
+            font-family: 'Noto Sans KR';
+            position: relative;
+            margin-top: 6.125rem;
+            margin-right: 12rem;
+            padding: 4rem 12.1875rem;
+
+            background-color: #ffffff;
+            filter: drop-shadow(0px 0px 40px #c6bde9);
+            border-radius: 2rem;
+            text-align: center;
+
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8.125rem;
+
+            ${md} {
+              padding: 1.375rem 0;
+              margin: 2.375rem auto 1.375rem;
+              max-width: 16rem;
+
+              gap: 2.75rem;
+            }
+
+            &:before {
+              content: '';
+              position: absolute;
+              top: 40px;
+              left: 190px;
+              width: 1.625rem;
+              height: 1.625rem;
+              background: ${palette.red};
+              box-shadow: 0 0 0.75rem ${palette.red};
+              border-radius: 50%;
+
+              ${md} {
+                width: 0.5rem;
+                height: 0.5rem;
+                top: 20px;
+                left: 45px;
+              }
+            }
+
+            > div {
+              > h3 {
+                font-size: 2.5rem;
+                font-weight: 500;
+                line-height: 4.375rem;
+
+                ${md} {
+                  font-size: 0.75rem;
+                  line-height: 1.5rem;
+                }
+              }
+
+              > p {
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+
+                ${md} {
+                  font-size: 0.625rem;
+                  line-height: 1rem;
+                }
+              }
+            }
+          }
+
+          .group {
+            margin-top: 6.5rem;
+
+            ${md} {
+              margin-top: 1.375rem;
+            }
+
+            > div + div {
+              margin-top: 1.5rem;
+
+              ${md} {
+                margin-top: 0.75rem;
+              }
+            }
+            > div {
+              display: flex;
+              flex-flow: row nowrap;
+              align-items: center;
+
+              ${md} {
+                padding: 0 1rem;
+              }
+
+              .circle {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+
+                width: 4.5rem;
+                height: 4.5rem;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.5);
+
+                ${md} {
+                  width: 2.5rem;
+                  height: 2.5rem;
+                }
+
+                img {
+                  width: 2.375rem;
+                  height: 2.375rem;
+
+                  ${md} {
+                    width: 1.3125rem;
+                    height: 1.3125rem;
+                  }
+                }
+              }
+
+              > span {
+                margin-left: 2.25rem;
+
+                color: #464646;
+                font-family: 'Noto Sans KR';
+                font-size: 1.5rem;
+                font-weight: 500;
+                line-height: 2.1875rem;
+
+                ${md} {
+                  margin-left: 0.8125rem;
+
+                  font-size: 0.75rem;
+                  line-height: 1.125rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .eleven {
+    padding: 21.625rem 0 15.875rem;
+
+    ${md} {
+      padding: 5.9375rem 0 0.625rem;
+    }
+    .wrapper {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+
+      .box {
+        position: relative;
+
+        padding: 0 10.875rem;
+
+        background-color: #ffffff;
+        box-shadow: 0 0 2.5rem ${palette.basicAccent3};
+        border-radius: 3.1875rem;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        font-family: 'Noto Sans KR';
+
+        ${md} {
+          padding: 0 1.5rem;
+        }
+        .question {
+          position: absolute;
+          top: -200px;
+
+          width: 16rem;
+          height: 16rem;
+
+          ${md} {
+            top: -45px;
+            width: 4rem;
+            height: 4rem;
+          }
+        }
+
+        .title {
+          margin: 6.25rem 0 3.125rem;
+
+          font-size: 3.125rem;
+          font-weight: 900;
+          line-height: 4.5rem;
+
+          ${md} {
+            margin: 2.125rem 0 1.125rem;
+            font-size: 1.25rem;
+            line-height: 1.8125rem;
+          }
+        }
+
+        .description {
+          margin-bottom: 4.375rem;
+
+          font-size: 2.5rem;
+          font-weight: bold;
+          line-height: 4.75rem;
+
+          display: inline-flex;
+          flex-flow: column nowrap;
+          align-items: center;
+
+          color: #484a54;
+
+          ${md} {
+            margin-bottom: 1.3125rem;
+            font-size: 0.875rem;
+            line-height: 1.625rem;
+          }
+
+          > p {
+            display: inline-flex;
+            flex-flow: row nowrap;
+            align-items: center;
+
+            > img {
+              width: 2.6875rem;
+              height: 2.6875rem;
+              ${md} {
+                width: 1.0625rem;
+                height: 1.0625rem;
+              }
+            }
+
+            > span {
+              color: #101417;
+            }
+
+            > b {
+              color: ${palette.basicAccent};
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .twelve {
+    min-height: 61rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: url('/static/background.png') no-repeat center/contain;
+
+    ${md} {
+      min-height: 12rem;
+    }
+    .wrapper {
+      font-family: 'Noto Sans KR';
+      text-align: center;
+      .title {
+        font-size: 6.875rem;
+        font-weight: bold;
+        line-height: 10rem;
+
+        color: #3700b9;
+
+        ${md} {
+          font-size: 1.875rem;
+          line-height: 2.6875rem;
+        }
+      }
+
+      .description {
+        margin-top: 4.1875rem;
+
+        font-size: 2.5rem;
+        font-weight: 500;
+        line-height: 3.625rem;
+        color: #464646;
+
+        ${md} {
+          margin-top: 0.9375rem;
+          font-size: 0.875rem;
+          line-height: 1.5rem;
+        }
+      }
+
+      .btn-group {
+        margin-top: 6.875rem;
+        display: inline-flex;
+        flex-flow: row nowrap;
+        gap: 3.3125rem;
+
+        ${md} {
+          margin-top: 1.25rem;
+          gap: 0.5rem;
+        }
+
+        > a {
+          cursor: pointer;
+
+          > img {
+            max-width: 26.25rem;
+            max-height: 8.125rem;
+            ${md} {
+              max-width: 6.75rem;
+              max-height: 2.375rem;
+            }
+          }
         }
       }
     }
